@@ -2,7 +2,7 @@ function PPTWebCreator(PPT)
   global rowid;
   rowid = -1;
   enable_sound = true;
-  outfile = fopen(strcat("./", int2str(PPT), ".csv"), 'W');
+  outfile = fopen(strcat("../PPTFile/", int2str(PPT), ".csv"), 'W');
   PPTFileCreator(PPT);
   load(strcat("../PPTFile/", int2str(PPT), "_PPTFile"));
 
