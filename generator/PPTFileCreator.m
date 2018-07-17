@@ -7,6 +7,7 @@ function PPTFileCreator(PPTStr, Avoid)
   blockLngth     = SeqLngth * 5;
   blocksPerLevel = 8;                                                              % I want 8 training blocks per level (1 block = 60 cues -> 480 cues)
 
+  % get a sequence offset not equivilant to Avoid
   num = Randi(size(OrthNoRuns, 1));
   while num == Avoid
     num = Randi(size(OrthNoRuns, 1));
@@ -91,6 +92,7 @@ function PPTFileCreator(PPTStr, Avoid)
   Level3Noise  = logical(LevelNoise(lvlBgn( 3):lvlEnd( 3)));   Level4Noise  = logical(LevelNoise(lvlBgn( 4):lvlEnd( 4)));
   Level5Noise  = logical(LevelNoise(lvlBgn( 5):lvlEnd( 5)));   Level6Noise  = logical(LevelNoise(lvlBgn( 6):lvlEnd( 6)));
 
+  % generate Level 7 and 8 orders with foils
   testBlocks = {[Seq Seq Seq Seq Seq], [ImpF1 ImpF1 ImpF1 ImpF1 ImpF1]};
   testNoiseBlocks  = {[ones(1, SeqLngth * 5) * 0], [ones(1, SeqLngth * 5) * 2]};
   TestOrderKey = [Shuffle(1:2) Shuffle(1:2)];
@@ -124,18 +126,21 @@ function PPTFileCreator(PPTStr, Avoid)
   Level4ISIs  = ISIs(1:length(Level4Order));  Level5ISIs = ISIs(1:length(Level5Order));   Level6ISIs = ISIs(1:length(Level6Order)); 
   Level7ISIs  = ISIs(1:length(Level7Order));  Level8ISIs = ISIs(1:length(Level8Order));
 
+  % Geerate post test orders
   Post1Order = [Seq   Seq  ];
-  Post2Order = [ImpF1 ImpF1]; 
-  Post3Order = [ImpF2 ImpF2]; 
+  Post2Order = [ImpF1 ImpF1];
+  Post3Order = [ImpF2 ImpF2];
   Post4Order = [RecF3 RecF3];
   Post5Order = [RecF4 RecF4];
 
+  % Generate post test ISIs
   Post1ISIs = [ISISeq ISISeq];
   Post2ISIs = [ISISeq ISISeq]; 
   Post3ISIs = [ISISeq ISISeq];
   Post4ISIs = [ISISeq ISISeq];
   Post5ISIs = [ISISeq ISISeq];
 
+  % Clear unused variables
   clear T1 T2 T3 Order1 Order2 Order3 ISISeqs ISIs LevelOrder LevelNoise LevelReps  AllSOCs   ...
         levelBlock i j x y a lvlBgn lvlEnd noise reps block blockNum testBlocks testOrder     ...
 	testNoise testNoiseBlock Seq RecF1 RecF2 RecF3 RecF4 SeqLngth TestOrderKey blockLngth ...
