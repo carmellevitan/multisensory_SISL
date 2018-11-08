@@ -1,0 +1,98 @@
+{
+
+    "sound-mode":"cue",
+    "lane-pitches":[261.63, 293.66, 329.63, 349.23],
+    "debug": true,
+    "board-height": 600,
+    "board-width": 260,
+    "lane-width": 45,
+    "bottom-gap": 60,
+    "cue-width-multiplier": 0.9,
+    "cue-height-multiplier": 0.9,
+    "target-height-multiplier": 1.0,
+    "lane-keys": ["D", "F", "J", "K"],
+
+    "speed" : {
+        "default": 1.0,
+        "lookback": 12,
+        "down-threshold": 6,
+        "up-threshold": 10,
+        "numerator": 21.0,
+        "denominator": 20.0,
+        "max-speed": 500.0,
+        "min-speed": 0.5
+    },
+
+    "colors" : [
+        {"hue": 240, "saturation": 1.0, "value": 1.0},
+        {"hue": 240, "saturation": 1.0, "value": 1.0},
+        {"hue": 240, "saturation": 1.0, "value": 1.0},
+        {"hue": 240, "saturation": 1.0, "value": 1.0},
+        {"hue": 240, "saturation": 1.0, "value": 1.0},
+        {"hue": 240, "saturation": 1.0, "value": 1.0}
+    ],
+
+    "dialog" : {
+        "dialog0" : {
+            "title": "Consent",
+            "type": "text",
+            "text": "Protocol: Online Perceptual-Motor Skills. Principal Investigator: Daniel J. Sanchez, PhD.  Institution: SRI International (A non-profit research institute) Supported by: NSF CNS-1228357. The purpose of this study is to explore the way individuals acquire and express motor skills.  If you agree to participate in this study, you will be asked to play a computer/mobile game that will require mouse clicks and/or keyboard presses to interact with onscreen stimuli.  Your participation in this study does not involve any physical or emotional risk to you.  Participation is completely voluntary; you may choose to not participate in this research study.  If you choose to participate and complete the session, which culminates in a provided completion code, you will receive the Reward amount listed on the Mechanical Turk HIT posting for your participation.  However, if you wish to withdraw prior to completion of the study session, payment will not be remitted.  If you choose to be in this study, you have the right to be treated with respect, including respect for your decision whether or not you wish to continue or stop being in the study.  No personally identifiable information will be collected, but the performance data you provide will be used to understand skill acquisition.  Your interactions within our browser environment and game applet will be continuously recorded, including mouse clicks and keyboard presses within the game.  Any questions you may have about this study may be directed to Dr. Daniel Sanchez at cortical-research@csl.sri.com.  Questions about your rights as a research subject may be directed to the SRI International IRB, at (650) 859-4022. If you wish to participate in this study, please select “I Consent” to begin. If you do not wish to participate in this study, please exit the page at any time.",
+            "button": "I Consent"
+        },
+        "dialog1" : {
+            "title": "Instructions",
+            "type": "text",
+            "text": "Your job is to ‘catch’ objects as they fall down the screen. If you hit the right button at the right time, the object will disappear! If you miss it, it will pass right through. Try your best to catch as many objects as possible, but also try to be accurate! Try to only make one response per object. Button mashing is generally frowned upon, and will not lead to success!",
+            "button": "Continue"
+        },
+        "dialog2": {
+            "title": "Start",
+            "type": "text",
+            "text": "Ready to play? Hit \"Continue\" when you’re ready to go.",
+            "button": "Continue"
+        },
+        "dialog3": {
+            "title": "Break",
+            "type": "text",
+            "text": "Great job! You’ve earned yourself a break. Please take a moment to rest your eyes and hands. Hit \"Continue\" when you’re ready to continue.",
+            "button": "Continue"
+        },
+        "dialog4": {
+            "title": "Awesome!",
+            "type": "text",
+            "text": "You finished the main portion and you are almost done! Hit \"Continue\" when you are ready to finish it up.",
+            "button": "Continue"
+        },
+        "dialog5": {
+            "title": "Test",
+            "type": "text",
+            "text": "Did you notice anything in particular about the experiment? Maybe any patterns or repetitions? Whether you picked up on it or not, a sequence of cues was repeating over and over during the task. It wasn’t there the whole time, but for the majority of the time there was a specific repeating sequence. Now, we’d like to know if you can identify that sequence. We’re going to have you play through a few short sequences, and after each one, we ask that you rate much you think it was your repeating sequence. Hit “Continue” when you’re ready to go!",
+            "button": "Continue"
+        },
+       "dialog6": {
+           "title": "Ready?",
+           "type": "text",
+           "text": "Play this short portion of the game and let us know if this was your training sequence.",
+           "button": "Continue"
+       },
+        "dialog7": {
+            "title": "Rating",
+            "type": "rating",
+            "text": "Please rate how much you believe that was your training sequence:",
+            "options": [
+                "Definitely not training sequence",
+                "Don’t think it was training sequence",
+                "Unsure",
+                "Think it was training sequence",
+                "Sure it was training sequence"
+            ],
+            "button": "Rate"
+        },
+        "dialog8": {
+            "title": "Done",
+            "type": "text",
+            "text": "That's all folks! Thanks for your participation!",
+            "button": "Continue"
+        }
+    }
+}
