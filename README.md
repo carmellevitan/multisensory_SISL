@@ -22,6 +22,7 @@ The files are placed in two directories within ./sisl, scenario and trial.
 
 ## Data
 
+- Note: We did not pull category (sequence v. noise v. practice) or the experimental condition (sound-mode changes) into the data structures, so we need to grab that from the inputs.
 - Data are stored in mysql on the server (cortical.csl.sri.com).
 - Make sure the directory /var/lib/mysql-files/webdasher/ is empty.
 - Log into mysql 
